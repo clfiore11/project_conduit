@@ -1,0 +1,12 @@
+# See sample settings.yaml file: https://pythonhosted.org/PyDrive/oauth.html#sample-settings-yaml
+client_config_backend: settings
+client_config:
+  client_id: 728072040700-lum7bsnfj5iubgoe7ak6gohkuqvr04k6.apps.googleusercontent.com
+  client_secret: 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
+save_credentials: True
+save_credentials_backend: file
+save_credentials_file: credentials.json
+get_refresh_token: True
+oauth_scope:
+  - https://www.googleapis.com/auth/drive.file
+  - https://www.googleapis.com/auth/drive.install
