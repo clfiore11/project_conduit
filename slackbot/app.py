@@ -61,6 +61,13 @@ def mention_reply(body, say):
     )
 
 
+@app.action(meal_prep_button.action_id)
+def button_click_action(body, ack, say):
+    ack(),
+    say({"text": "Grabbing that tasty meal!"})
+    meal_prep_button.upload_file(channel=body["user"]["id"])
+
+
 def main():
     handler = SocketModeHandler(app, SLACK_APP_TOKEN)
     handler.start()
