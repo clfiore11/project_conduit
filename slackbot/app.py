@@ -7,6 +7,7 @@ from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_sdk.errors import SlackApiError
 from messages.greeting import GREETING
+from messages.mention import MENTION_REPLY
 
 # load env variables from .env file
 load_dotenv()
@@ -41,7 +42,7 @@ def mention_reply(body, say):
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": f"KEEP MY WIFES NAME OUT YA MOUTH",
+                    "text": f"{MENTION_REPLY}",
                 },
             },
         ],
