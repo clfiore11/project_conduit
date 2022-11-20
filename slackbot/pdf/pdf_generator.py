@@ -103,9 +103,6 @@ class TableauPDF:
 
         # Log out
         conn.sign_out()
-        
-    def upload_file(self, channel):
-        self.app.client.files_upload_v2(channels=channel, file=self.file_path)
 
 # Tableau = TableauPDF()
 # Tableau.generate_pdf('[Draft] NPS One Pagers Mock up' , 'NPSOnePagerDIRECTROLLUP', None)

@@ -80,11 +80,12 @@ def button_click_action(body, ack, say):
     say({"text": "Grabbing your requested PDF!"})
     pdf.upload_file(channel=body["user"]["id"])
 
+
 @app.action(tab.action_id)
 def button_click_action(body, ack, say):
     ack(),
     say({"text": "Grabbing your requested PDF!"})
-    tab.generate_pdf('[Draft] NPS One Pagers Mock up' , 'NPSOnePagerDIRECTROLLUP', None)
+    tab.generate_pdf('[Draft] NPS One Pagers Mock up' , 'NPSOnePagerDIRECTROLLUP', None) # Example 
     pdf.upload_file(channel=body["user"]["id"])
 
 
