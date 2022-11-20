@@ -9,26 +9,38 @@ from slack_sdk.errors import SlackApiError
 from messages.greeting import GREETING
 from messages.mention import MENTION_REPLY
 from buttons.file_upload_button import FileUploadButton
+from pdf.pdf_generator import TableauPDF
 
-# load env variables from .env file
+# Load env variables from .env file
 load_dotenv()
 
+# Slack App and Bot Tokens
 SLACK_APP_TOKEN = os.environ["SLACK_APP_TOKEN"]
-SLACK_BOT_TOKEN = os.environ["SLACKBOT_TOKEN"]
+SLACK_BOT_TOKEN = os.environ["SLACK_BOT_TOKEN"]
 
-app = App(token=SLACK_BOT_TOKEN, name="Project Conduit")
+# Assigning app correct token
+app = App(token=SLACK_BOT_TOKEN)
 logger = logging.getLogger(__name__)
 
 
-# define buttons
-meal_prep_button = FileUploadButton(
+# Define buttons
+pdf = FileUploadButton(
     app=app,
-    name="Fetch Meal Prep",
-    channels="C04CE7NKNG0",
-    file_path="/Users/cfiore/Documents/GitHub/project_conduit/googledrive_api/files/test.png",
+    name="Fetch Tableau PDF",
+    channels="xoxp-439",
+    file_path="/Users/sylvesterikpa/Desktop/default.pdf",
 )
 
 
+# Define buttons again | Test
+tab = TableauPDF(
+    app=app,
+    name="Fetch Tableau PDF 2",
+    channels="xoxp-439",
+    file_path="/Users/sylvesterikpa/Desktop/Project 699/project_conduit/default.pdf",
+)
+
+# Slack Socket to Listen for the world hello
 @app.message("hello")
 def message_hello(message, say):
     say(
@@ -37,11 +49,12 @@ def message_hello(message, say):
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": f"Hello <@{message['user']}>! Here's what's new:\n{GREETING}",
+                    "text": f"Hello <@{message['user']}>. {GREETING}",
                 },
             },
-            # buttons
-            {"type": "actions", "elements": [meal_prep_button.__dict__()[0]]},
+            # Buttons
+            {"type": "actions", "elements": [pdf.__dict__()[0]]},
+            {"type": "actions", "elements": [tab.__dict__()[0]]}
         ],
     )
 
@@ -61,11 +74,18 @@ def mention_reply(body, say):
     )
 
 
-@app.action(meal_prep_button.action_id)
+@app.action(pdf.action_id)
 def button_click_action(body, ack, say):
     ack(),
-    say({"text": "Grabbing that tasty meal!"})
-    meal_prep_button.upload_file(channel=body["user"]["id"])
+    say({"text": "Grabbing your requested PDF!"})
+    pdf.upload_file(channel=body["user"]["id"])
+
+@app.action(tab.action_id)
+def button_click_action(body, ack, say):
+    ack(),
+    say({"text": "Grabbing your requested PDF!"})
+    tab.generate_pdf('[Draft] NPS One Pagers Mock up' , 'NPSOnePagerDIRECTROLLUP', None)
+    pdf.upload_file(channel=body["user"]["id"])
 
 
 def main():

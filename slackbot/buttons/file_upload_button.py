@@ -23,4 +23,4 @@ class FileUploadButton:
         )
 
     def upload_file(self, channel):
-        self.app.client.files_upload(channels=channel, file=self.file_path)
+        self.app.client.files_upload_v2(channels=channel, file=self.file_path)
