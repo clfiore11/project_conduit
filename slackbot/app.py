@@ -8,6 +8,7 @@ from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_sdk.errors import SlackApiError
 from messages.greeting import GREETING
 from messages.mention import MENTION_REPLY
+from buttons.file_upload_button import FileUploadButton
 
 # load env variables from .env file
 load_dotenv()
@@ -17,6 +18,15 @@ SLACK_BOT_TOKEN = os.environ["SLACKBOT_TOKEN"]
 
 app = App(token=SLACK_BOT_TOKEN, name="Project Conduit")
 logger = logging.getLogger(__name__)
+
+
+# define buttons
+meal_prep_button = FileUploadButton(
+    app=app,
+    name="Fetch Meal Prep",
+    channels="C04CE7NKNG0",
+    file_path="/Users/cfiore/Documents/GitHub/project_conduit/googledrive_api/files/test.png",
+)
 
 
 @app.message("hello")
@@ -30,6 +40,8 @@ def message_hello(message, say):
                     "text": f"Hello <@{message['user']}>! Here's what's new:\n{GREETING}",
                 },
             },
+            # buttons
+            {"type": "actions", "elements": [meal_prep_button.__dict__()[0]]},
         ],
     )
 
