@@ -1,1 +1,6 @@
+
+# ignore venv fil
 .venv
+
+# ignore project environment variables
+.env
