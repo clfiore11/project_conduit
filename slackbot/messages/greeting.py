@@ -1,3 +1,1 @@
-GREETING = """
-HELLO WORLD, THIS IS A TEST
-"""
+GREETING = "How can I help you today?"
