@@ -39,7 +39,7 @@ class TableauPDF:
     def generate_pdf(self, name, tab, filters: T.Union[T.List, str, None]):
         # Login to the Tableau Instance
         tableau_server_config = {
-                'dd_people': {
+                os.environ['environment']: {
                         'server': os.environ['server'],
                         'api_version': os.environ['api_version'],
                         'personal_access_token_name': os.environ['personal_access_token_name'],
