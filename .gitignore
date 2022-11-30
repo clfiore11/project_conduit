@@ -5,6 +5,5 @@
 # ignore project config files
 .env
 .json
-/*.yaml
 *.json
 *.yaml
