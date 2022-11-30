@@ -4,3 +4,4 @@
 
 # ignore project environment variables
 .env
+.json
