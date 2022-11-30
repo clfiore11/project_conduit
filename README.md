@@ -22,6 +22,23 @@ The initial project is setup to integrate the following applications:
 3. Install modules by running `pip install -r requirements.txt`
 
 ### Google Drive API Instructions
+1. Follow instructions below from (Quickstart Authentication)[https://pythonhosted.org/PyDrive/quickstart.html#authentication]:
+
+> 1. Go to APIs Console and make your own project.
+> 2. Search for ‘Google Drive API’, select the entry, and click ‘Enable’.
+> 3. Select ‘Credentials’ from the left menu, click ‘Create Credentials’, select ‘OAuth client ID’.
+> 4. Now, the product name and consent screen need to be set -> click ‘Configure consent screen’ and
+> allow the instructions. Once finished:
+>   - Select ‘Application type’ to be Web application.
+>   - Enter an appropriate name.
+>   - Input http://localhost:8080 for ‘Authorized JavaScript origins’.
+>   - Input http://localhost:8080/ for ‘Authorized redirect URIs’.
+> 5. Click ‘Save’.
+> 6. Click `Download JSON` on the right side of Client ID to download client_secret_<really long ID>.json.
+> The downloaded file has all authentication information of your application. **Rename the file to “client_secrets.json” and place it in your working directory.**
+
+2. Create `googledrive_api/settings.yaml` by following this sample (file)[https://pythonhosted.org/PyDrive/oauth.html#sample-settings-yaml]
+
 
 
 
