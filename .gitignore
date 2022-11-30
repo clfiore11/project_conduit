@@ -2,6 +2,7 @@
 # ignore venv file
 .venv
 
-# ignore project environment variables
+# ignore project config files
 .env
 .json
+.yaml
