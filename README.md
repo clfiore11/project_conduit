@@ -41,3 +41,32 @@ The initial project is setup to integrate the following applications:
 
 
 ### Tableau API Instructions
+* Follow instructions below from [tableau-api-lib overview](https://pypi.org/project/tableau-api-lib/):
+
+Copy the code below into your `.env` file.
+
+```
+server=https://YourTableauServerNameHere.com/
+api_version=3.12
+personal_access_token_name=Token Name
+personal_access_token_secret=Token Secret
+site_name=Site Name
+site_url=Site URL
+environment=Enviornment Name
+```
+
+API Version:  
+* To find [API Versions](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_concepts_versions.html/), use this resource provided by Tableau.
+
+
+Generating Token Name and Secrets:  
+* Login to Tableau and navigate to the 'My Account Settings' page.
+* Navigate to the 'Personal Access Tokens' section and input a `token name` of your choice. This will generate an associated token name and `secret key` that we will use in the code above. 
+
+
+Site Name and URL:
+* `site_url`, also known as the content URL, and `site_name` is a segment of the URL that indicates the site you are logging into. You can verify what your site_url and site name is by navigating to your site in your browser, and identifying how your site appears in the URL path.
+
+[Optional] Enviornment:
+*  If you have multiple Tabelau Server instances, use environment to delineate between them. This information is typically held by your Tableau admin. 
+
