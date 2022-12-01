@@ -43,7 +43,7 @@ The initial project is setup to integrate the following applications:
 ### Tableau API Instructions
 * Follow instructions below from [tableau-api-lib overview](https://pypi.org/project/tableau-api-lib/):
 
-Copy the code below into your `.env` file.
+Create a `.env` file and copy the code below to hold your enviornment variables and secrets.
 
 ```
 server=https://YourTableauServerNameHere.com/
