@@ -85,14 +85,15 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[T.
 
 if __name__ == "__main__":
     import argparse
+    
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        help="Provide the following to get the data you need.  Dashboard Name, Tab, filter, and List/ value to filter",
-    )
+    parser.add_argument('name', help="Dashboard Name")
+    parser.add_argument('tab', help="Dashboard Tab")
+    parser.add_argument('filter', help="Dashboard Filter")
+    parser.add_argument('value', help="Value(s)")
     args = parser.parse_args()
 
     try:
-        True # TODO: Placeholder
-            # generate_pdf()
+        generate_pdf(args.name, args.tab, args.filter, args.value)
     except Exception as e:
         print(e)
