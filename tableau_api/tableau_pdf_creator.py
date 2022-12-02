@@ -56,8 +56,7 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[T.
 
     else:
         name_list = list(filters)
-        #TODO: Change this param based on the dashboard
-        # Parameter to filter on. Right now, it is Manager
+        #TODO: Ensure list of strings and individual string work on this. 
         name_filter_field = parse.quote(filterable)
         for i in name_list:
             name_filter_value = parse.quote(i)
