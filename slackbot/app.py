@@ -22,13 +22,12 @@ SLACK_BOT_TOKEN = os.environ["SLACK_BOT_TOKEN"]
 app = App(token=SLACK_BOT_TOKEN)
 logger = logging.getLogger(__name__)
 
-
 # Define buttons
 pdf = FileUploadButton(
     app=app,
     name="Fetch Tableau PDF",
     channels="xoxp-439",
-    file_path="/Users/sylvesterikpa/Desktop/default.pdf",
+    file_path="../googledrive_api/files/test.png",
 )
 
 
@@ -37,7 +36,7 @@ tab = TableauPDF(
     app=app,
     name="Fetch Tableau PDF 2",
     channels="xoxp-439",
-    file_path="/Users/sylvesterikpa/Desktop/Project 699/project_conduit/default.pdf",
+    file_path="../googledrive_api/files/test.png",
 )
 
 # Slack Socket to Listen for the world hello
@@ -54,7 +53,7 @@ def message_hello(message, say):
             },
             # Buttons
             {"type": "actions", "elements": [pdf.__dict__()[0]]},
-            {"type": "actions", "elements": [tab.__dict__()[0]]}
+            {"type": "actions", "elements": [tab.__dict__()[0]]},
         ],
     )
 
@@ -85,7 +84,9 @@ def button_click_action(body, ack, say):
 def button_click_action(body, ack, say):
     ack(),
     say({"text": "Grabbing your requested PDF!"})
-    tab.generate_pdf('[Draft] NPS One Pagers Mock up' , 'NPSOnePagerDIRECTROLLUP', None) # Example 
+    tab.generate_pdf(
+        "[Draft] NPS One Pagers Mock up", "NPSOnePagerDIRECTROLLUP", None
+    )  # Example
     pdf.upload_file(channel=body["user"]["id"])
 
 
