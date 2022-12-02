@@ -34,15 +34,13 @@ def gdrive_update_upload(folder_id: str):
     ).GetList()
 
     gfile_dict = {file["title"]: file["id"] for file in gfiles}
-    for file_name in upload_file_dict:
+    for file_name, value in upload_file_dict.items():
         try:
             if file_name in gfile_dict:
                 logging.info(f"{file_name} file located in google drive...")
                 file = drive.CreateFile({"id": f"{gfile_dict[file_name]}"})
-                file.SetContentFile(upload_file_dict[file_name])
-                logging.info(f"Updating {file_name} file contents...")
-                file.Upload()
-                logging.info("File successfully updated!")
+                file.SetContentFile(value)
+                _extracted_from_gdrive_update_upload_25('Updating ', file_name, file, "File successfully updated!")
 
             if file_name not in gfile_dict.keys():
                 logging.info(f"{file_name} file not located in google drive...")
@@ -51,12 +49,17 @@ def gdrive_update_upload(folder_id: str):
                 )
 
                 file.SetContentFile(upload_file_dict[file_name])
-                logging.info(f"Uploading {file_name} file contents...")
-                file.Upload()
-                logging.info("File successfully uploaded!")
+                _extracted_from_gdrive_update_upload_25('Uploading ', file_name, file, "File successfully uploaded!")
 
         except Exception as e:
             print(e)
+
+
+# TODO Rename this here and in `gdrive_update_upload`
+def _extracted_from_gdrive_update_upload_25(arg0, file_name, file, arg3):
+    logging.info(f"{arg0}{file_name} file contents...")
+    file.Upload()
+    logging.info(arg3)
 
 
 if __name__ == "__main__":
