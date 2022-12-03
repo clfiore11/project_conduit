@@ -42,6 +42,7 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[st
     vid = views_df[(views_df['workbook_name'] == name) & (views_df['viewUrlName'] == tab)]['id'].values[0]
 
     if filters is None:
+        print('none')
         # Downloading the default view as it appears on the dashboard
         pdf_params = {
             'type': 'type=unspecified',
@@ -55,14 +56,15 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[st
         os.chdir('../googledrive_api/files')
         with open('default.pdf', 'wb') as pdf_file:
             pdf_file.write(pdf_view.content)
-
+        
     else:
         name_list = list(filters)
         #TODO: Ensure list of strings and individual string work on this. 
-        # name_filter_field = parse.quote(filterable)
-        name_filter_field = filterable
+        name_filter_field = parse.quote(filterable)
+        
         for i in name_list:
-            name_filter_value = parse.quote(i)
+            # name_filter_value = parse.quote(i)
+            name_filter_value = i
             # Downloading the default view as it appears on the dashboard
 
             pdf_params = {
@@ -81,6 +83,7 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[st
             os.chdir('../googledrive_api/files')
             with open(pdf_title_string, 'wb') as pdf_file:
                 pdf_file.write(pdf_view.content)
+            
 
     # Log out
     conn.sign_out()

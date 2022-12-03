@@ -7,11 +7,12 @@ from utils.tableau_api.pdf_creator import generate_pdf
 
 class FileUploadButton:
     def __init__(
-        self, app: App, name: str, channels: T.Union[T.List, str], file_path: str
+        self, app: App, name: str, channels: T.Union[T.List, str], manager:T.Union[None, str],  file_path: str
     ):
         self.app = app
         self.name = name
         self.channels = channels
+        self.manager = manager
         self.file_path = file_path
         self.action_id = f"{self.name}_button_clicked"
 
@@ -24,7 +25,7 @@ class FileUploadButton:
             },
         )
 
-    def upload_file(self, channel):
+    def upload_file(self, channel, manager):
 
         owd = os.getcwd()
 
@@ -33,7 +34,7 @@ class FileUploadButton:
         
         # generate pdf
         #TODO: Remember to change these args
-        generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+        generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', [self.manager])
        
         # change dir to function dir
         os.chdir("../")
