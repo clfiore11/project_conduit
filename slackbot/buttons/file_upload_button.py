@@ -1,6 +1,9 @@
 import typing as T
 from slack_bolt import App
+import os
 import re
+
+from utils.googledrive_api.gdrive_update_upload import gdrive_update_upload
 
 
 class FileUploadButton:
@@ -23,4 +26,9 @@ class FileUploadButton:
         )
 
     def upload_file(self, channel):
+        # change dir to function dir
+        os.chdir("utils/googledrive_api")
+        # upload fresh file to gdrive
+        gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
+
         self.app.client.files_upload(channels=channel, file=self.file_path)

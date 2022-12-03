@@ -27,7 +27,7 @@ pdf = FileUploadButton(
     app=app,
     name="Fetch Tableau PDF",
     channels="xoxp-439",
-    file_path="../googledrive_api/files/test.png",
+    file_path="files/test.png",
 )
 
 
@@ -36,7 +36,7 @@ tab = TableauPDF(
     app=app,
     name="Fetch Tableau PDF 2",
     channels="xoxp-439",
-    file_path="../googledrive_api/files/test.png",
+    file_path="files/test.png",
 )
 
 # Slack Socket to Listen for the world hello

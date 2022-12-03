@@ -1,0 +1,231 @@
+2022-12-02 16:32:52,495 [INFO] A new session has been established (session id: 13d890c1-4496-449d-a867-2e05d06746fe)
+2022-12-02 16:32:52,495 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:32:52,578 [INFO] Starting to receive messages from a new connection (session id: 13d890c1-4496-449d-a867-2e05d06746fe)
+2022-12-02 16:33:03,634 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'files')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 28, in upload_file
+    gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/utils/googledrive_api/gdrive_update_upload.py", line 30, in gdrive_update_upload
+    for file in os.listdir("files")
+FileNotFoundError: [Errno 2] No such file or directory: 'files'
+2022-12-02 16:33:05,336 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'files')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 28, in upload_file
+    gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/utils/googledrive_api/gdrive_update_upload.py", line 30, in gdrive_update_upload
+    for file in os.listdir("files")
+FileNotFoundError: [Errno 2] No such file or directory: 'files'
+2022-12-02 16:36:19,875 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'files')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 28, in upload_file
+    def upload_file(self, channel):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/utils/googledrive_api/gdrive_update_upload.py", line 30, in gdrive_update_upload
+    os.path.join("files", file).split("/")[-1]: os.path.join("files", file)
+FileNotFoundError: [Errno 2] No such file or directory: 'files'
+2022-12-02 16:36:32,067 [INFO] A new session has been established (session id: 1deeb0cc-3142-423e-9d37-b61c421bab0b)
+2022-12-02 16:36:32,067 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:36:32,094 [INFO] Starting to receive messages from a new connection (session id: 1deeb0cc-3142-423e-9d37-b61c421bab0b)
+2022-12-02 16:36:42,382 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'slackbot/utils/googledrive_api')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("slackbot/utils/googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'slackbot/utils/googledrive_api'
+2022-12-02 16:36:44,207 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'slackbot/utils/googledrive_api')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("slackbot/utils/googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'slackbot/utils/googledrive_api'
+2022-12-02 16:37:16,484 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'slackbot/utils/googledrive_api')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("../utils/googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'slackbot/utils/googledrive_api'
+2022-12-02 16:37:32,675 [INFO] A new session has been established (session id: 361c87cb-051c-4cb0-b52e-1d29b6736cd7)
+2022-12-02 16:37:32,675 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:37:32,697 [INFO] Starting to receive messages from a new connection (session id: 361c87cb-051c-4cb0-b52e-1d29b6736cd7)
+2022-12-02 16:37:34,264 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../utils/googledrive_api')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("../utils/googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../utils/googledrive_api'
+2022-12-02 16:38:16,725 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../utils/googledrive_api')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    # os.chdir("../utils/googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../utils/googledrive_api'
+2022-12-02 16:38:17,956 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../utils/googledrive_api')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    # os.chdir("../utils/googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../utils/googledrive_api'
+2022-12-02 16:38:35,661 [INFO] A new session has been established (session id: bbde4bb9-1936-4c33-bca6-7d903e120bc4)
+2022-12-02 16:38:35,662 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:38:35,738 [INFO] Starting to receive messages from a new connection (session id: bbde4bb9-1936-4c33-bca6-7d903e120bc4)
+2022-12-02 16:38:41,156 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'files')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 31, in upload_file
+    gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/utils/googledrive_api/gdrive_update_upload.py", line 31, in gdrive_update_upload
+    for file in os.listdir("files")
+FileNotFoundError: [Errno 2] No such file or directory: 'files'
+2022-12-02 16:39:39,909 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'files')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 31, in upload_file
+    gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/utils/googledrive_api/gdrive_update_upload.py", line 31, in gdrive_update_upload
+    for file in os.listdir("files")
+FileNotFoundError: [Errno 2] No such file or directory: 'files'
+2022-12-02 16:40:06,576 [INFO] A new session has been established (session id: b62d167f-5e95-4032-900d-699cbca59770)
+2022-12-02 16:40:06,585 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:40:06,643 [INFO] Starting to receive messages from a new connection (session id: b62d167f-5e95-4032-900d-699cbca59770)
+2022-12-02 16:40:10,629 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '/utils')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("/utils")
+FileNotFoundError: [Errno 2] No such file or directory: '/utils'
+2022-12-02 16:40:45,036 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '/utils')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("utils/")
+FileNotFoundError: [Errno 2] No such file or directory: '/utils'
+2022-12-02 16:40:46,732 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '/utils')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("utils/")
+FileNotFoundError: [Errno 2] No such file or directory: '/utils'
+2022-12-02 16:41:12,822 [INFO] A new session has been established (session id: 4e306bd7-97a0-433a-8ee2-fe94d9f78dfa)
+2022-12-02 16:41:12,825 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:41:12,867 [INFO] Starting to receive messages from a new connection (session id: 4e306bd7-97a0-433a-8ee2-fe94d9f78dfa)
+2022-12-02 16:41:16,828 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    os.chdir("utils/")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/'
+2022-12-02 16:42:52,777 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 29, in upload_file
+    print(os.getcwd())
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/'
+2022-12-02 16:43:21,922 [INFO] A new session has been established (session id: 27260256-98bb-4662-8f07-7364bf653649)
+2022-12-02 16:43:21,923 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:43:21,996 [INFO] Starting to receive messages from a new connection (session id: 27260256-98bb-4662-8f07-7364bf653649)
+2022-12-02 16:43:25,198 [INFO] Files to be updated/uploaded: dict_keys(['test.png'])...
+2022-12-02 16:43:25,203 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 16:43:25,857 [INFO] test.png file located in google drive...
+2022-12-02 16:43:25,889 [INFO] Updating test.png file contents...
+2022-12-02 16:43:29,059 [INFO] File successfully updated!
+2022-12-02 16:44:38,367 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/googledrive_api')
+Traceback (most recent call last):
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/cfiore/Documents/GitHub/project_conduit/.venv/lib/python3.9/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/cfiore/Documents/GitHub/project_conduit/slackbot/buttons/file_upload_button.py", line 30, in upload_file
+    os.chdir("utils/googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/googledrive_api'
+2022-12-02 16:46:10,519 [INFO] A new session has been established (session id: 22f99211-8c80-413e-bd72-ce73a07543b7)
+2022-12-02 16:46:10,519 [INFO] ⚡️ Bolt app is running!
+2022-12-02 16:46:10,570 [INFO] Starting to receive messages from a new connection (session id: 22f99211-8c80-413e-bd72-ce73a07543b7)
+2022-12-02 16:46:15,530 [INFO] Files to be updated/uploaded: dict_keys(['test.png'])...
+2022-12-02 16:46:15,535 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 16:46:16,105 [INFO] test.png file located in google drive...
+2022-12-02 16:46:16,135 [INFO] Updating test.png file contents...
+2022-12-02 16:46:18,910 [INFO] File successfully updated!
