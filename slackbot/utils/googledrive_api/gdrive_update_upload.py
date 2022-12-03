@@ -60,14 +60,6 @@ def gdrive_update_upload(folder_id: str):
         except Exception as e:
             print(e)
 
-
-# # TODO Rename this here and in `gdrive_update_upload`
-# def _extracted_from_gdrive_update_upload_25(arg0, file_name, file, arg3):
-#     logging.info(f"{arg0}{file_name} file contents...")
-#     file.Upload()
-#     logging.info(arg3)
-
-
 if __name__ == "__main__":
     import argparse
 
