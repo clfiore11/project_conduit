@@ -229,3 +229,596 @@ FileNotFoundError: [Errno 2] No such file or directory: 'utils/googledrive_api'
 2022-12-02 16:46:16,105 [INFO] test.png file located in google drive...
 2022-12-02 16:46:16,135 [INFO] Updating test.png file contents...
 2022-12-02 16:46:18,910 [INFO] File successfully updated!
+2022-12-02 17:01:48,216 [INFO] A new session has been established (session id: bc4b4353-13fa-4a02-9666-bfc7c1b1feb6)
+2022-12-02 17:01:48,216 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:01:48,255 [INFO] Starting to receive messages from a new connection (session id: bc4b4353-13fa-4a02-9666-bfc7c1b1feb6)
+2022-12-02 17:02:26,689 [INFO] Files to be updated/uploaded: dict_keys(['test.png'])...
+2022-12-02 17:02:26,689 [ERROR] Failed to run listener function (error: local variable 'drive' referenced before assignment)
+Traceback (most recent call last):
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/venv/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/venv/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 32, in upload_file
+    gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/googledrive_api/gdrive_update_upload.py", line 35, in gdrive_update_upload
+    gfiles = drive.ListFile(
+UnboundLocalError: local variable 'drive' referenced before assignment
+2022-12-02 17:13:58,160 [INFO] A new session has been established (session id: 80ed1040-f6ef-4511-a87f-41a78679f727)
+2022-12-02 17:13:58,160 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:13:58,167 [INFO] Starting to receive messages from a new connection (session id: 80ed1040-f6ef-4511-a87f-41a78679f727)
+2022-12-02 17:14:08,638 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 17:14:08,638 [INFO] Successfully retrieved access token
+2022-12-02 17:14:08,640 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 17:14:08,642 [INFO] Files to be updated/uploaded: dict_keys(['test.png'])...
+2022-12-02 17:14:09,111 [INFO] test.png file located in google drive...
+2022-12-02 17:14:09,130 [INFO] Updating test.png file contents...
+2022-12-02 17:14:12,572 [INFO] File successfully updated!
+2022-12-02 17:50:36,317 [INFO] A new session has been established (session id: a682056c-ba11-429f-a829-17848c63d041)
+2022-12-02 17:50:36,317 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:50:36,358 [INFO] Starting to receive messages from a new connection (session id: a682056c-ba11-429f-a829-17848c63d041)
+2022-12-02 17:50:54,817 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 37, in upload_file
+    os.chdir("../googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api'
+2022-12-02 17:52:35,667 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 30, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 17:53:15,193 [INFO] A new session has been established (session id: 4366ca88-ea8f-4d4d-99f2-a89d8d047383)
+2022-12-02 17:53:15,193 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:53:15,241 [INFO] Starting to receive messages from a new connection (session id: 4366ca88-ea8f-4d4d-99f2-a89d8d047383)
+2022-12-02 17:53:22,353 [ERROR] Failed to run listener function (error: chdir() missing required argument 'path' (pos 1))
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 36, in upload_file
+    print(os.chdir())
+TypeError: chdir() missing required argument 'path' (pos 1)
+2022-12-02 17:53:47,797 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 30, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 17:54:02,664 [INFO] A new session has been established (session id: 3bc9881a-e619-4524-86fb-38bbf1cdd20a)
+2022-12-02 17:54:02,665 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:54:02,670 [INFO] Starting to receive messages from a new connection (session id: 3bc9881a-e619-4524-86fb-38bbf1cdd20a)
+2022-12-02 17:54:08,684 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 38, in upload_file
+    os.chdir("../googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api'
+2022-12-02 17:54:54,075 [INFO] A new session has been established (session id: 3f5b6e02-f579-4d21-aaa1-903b20250fa8)
+2022-12-02 17:54:54,075 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:54:54,087 [INFO] Starting to receive messages from a new connection (session id: 3f5b6e02-f579-4d21-aaa1-903b20250fa8)
+2022-12-02 17:55:09,742 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 38, in upload_file
+    os.chdir("../googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api'
+2022-12-02 17:55:54,133 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 30, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 17:56:51,901 [INFO] A new session has been established (session id: b0ad8a98-480e-46bb-901e-64b547a2dc8c)
+2022-12-02 17:56:51,901 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:56:51,908 [INFO] Starting to receive messages from a new connection (session id: b0ad8a98-480e-46bb-901e-64b547a2dc8c)
+2022-12-02 17:57:13,525 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 17:57:13,525 [INFO] Successfully retrieved access token
+2022-12-02 17:57:13,539 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 17:57:13,545 [INFO] Files to be updated/uploaded: dict_keys(['test.png', 'default.pdf'])...
+2022-12-02 17:57:14,093 [INFO] test.png file located in google drive...
+2022-12-02 17:57:14,098 [INFO] Updating test.png file contents...
+2022-12-02 17:57:17,668 [INFO] File successfully updated!
+2022-12-02 17:57:17,669 [INFO] default.pdf file not located in google drive...
+2022-12-02 17:57:17,669 [INFO] Uploading default.pdf file contents...
+2022-12-02 17:57:19,477 [INFO] File successfully uploaded!
+2022-12-02 17:59:12,659 [INFO] A new session has been established (session id: e3063e41-901b-48d7-8a35-37452ef6eed6)
+2022-12-02 17:59:12,660 [INFO] ⚡️ Bolt app is running!
+2022-12-02 17:59:12,690 [INFO] Starting to receive messages from a new connection (session id: e3063e41-901b-48d7-8a35-37452ef6eed6)
+2022-12-02 17:59:21,788 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'files')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 40, in upload_file
+    gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/googledrive_api/gdrive_update_upload.py", line 32, in gdrive_update_upload
+    for file in os.listdir("files")
+FileNotFoundError: [Errno 2] No such file or directory: 'files'
+2022-12-02 18:04:02,160 [INFO] A new session has been established (session id: 70eb4042-73cd-48f6-9c6f-bb6737252713)
+2022-12-02 18:04:02,160 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:04:02,161 [INFO] Starting to receive messages from a new connection (session id: 70eb4042-73cd-48f6-9c6f-bb6737252713)
+2022-12-02 18:04:08,964 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files/default.pdf')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 34, in upload_file
+    generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/tableau_api/pdf_creator.py", line 56, in generate_pdf
+    with open(file_path, 'wb') as pdf_file:
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files/default.pdf'
+2022-12-02 18:08:55,183 [INFO] A new session has been established (session id: f0341efc-09e5-4338-b7bd-f2b4175a18f9)
+2022-12-02 18:08:55,184 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:08:55,206 [INFO] Starting to receive messages from a new connection (session id: f0341efc-09e5-4338-b7bd-f2b4175a18f9)
+2022-12-02 18:09:16,449 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files/default.pdf')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 34, in upload_file
+    generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/tableau_api/pdf_creator.py", line 56, in generate_pdf
+    with open(file_path, 'wb') as pdf_file:
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files/default.pdf'
+2022-12-02 18:11:01,082 [INFO] A new session has been established (session id: 3f5203da-4b5c-4977-98e1-d67babcacebd)
+2022-12-02 18:11:01,082 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:11:01,170 [INFO] Starting to receive messages from a new connection (session id: 3f5203da-4b5c-4977-98e1-d67babcacebd)
+2022-12-02 18:11:14,165 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 38, in upload_file
+    os.chdir("../googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api'
+2022-12-02 18:11:34,217 [INFO] A new session has been established (session id: a8e7dcd2-e929-4a68-b56c-4b60b8e268a5)
+2022-12-02 18:11:34,218 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:11:34,235 [INFO] Starting to receive messages from a new connection (session id: a8e7dcd2-e929-4a68-b56c-4b60b8e268a5)
+2022-12-02 18:11:42,971 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:11:42,972 [INFO] Successfully retrieved access token
+2022-12-02 18:11:42,985 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:11:42,992 [INFO] Files to be updated/uploaded: dict_keys(['test.png', 'default.pdf'])...
+2022-12-02 18:11:43,673 [INFO] test.png file located in google drive...
+2022-12-02 18:11:43,682 [INFO] Updating test.png file contents...
+2022-12-02 18:11:47,355 [INFO] File successfully updated!
+2022-12-02 18:11:47,356 [INFO] default.pdf file located in google drive...
+2022-12-02 18:11:47,356 [INFO] Updating default.pdf file contents...
+2022-12-02 18:11:49,390 [INFO] File successfully updated!
+2022-12-02 18:11:49,391 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: b'files/default.pdf')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 43, in upload_file
+    self.app.client.files_upload(channels=channel, file=self.file_path)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/client.py", line 2990, in files_upload
+    return self.api_call("files.upload", files={"file": file}, data=kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 156, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 187, in _sync_send
+    return self._urllib_api_call(
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 269, in _urllib_api_call
+    f: BinaryIO = open(v.encode("utf-8", "ignore"), "rb")
+FileNotFoundError: [Errno 2] No such file or directory: b'files/default.pdf'
+2022-12-02 18:12:42,724 [INFO] A new session has been established (session id: f5ebbb05-9757-4530-a7c4-fc08d78be5fb)
+2022-12-02 18:12:42,724 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:12:42,731 [INFO] Starting to receive messages from a new connection (session id: f5ebbb05-9757-4530-a7c4-fc08d78be5fb)
+2022-12-02 18:12:51,873 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:12:51,874 [INFO] Successfully retrieved access token
+2022-12-02 18:12:51,880 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:12:51,888 [INFO] Files to be updated/uploaded: dict_keys(['test.png', 'default.pdf'])...
+2022-12-02 18:12:52,481 [INFO] test.png file located in google drive...
+2022-12-02 18:12:52,491 [INFO] Updating test.png file contents...
+2022-12-02 18:12:56,582 [INFO] File successfully updated!
+2022-12-02 18:12:56,582 [INFO] default.pdf file located in google drive...
+2022-12-02 18:12:56,583 [INFO] Updating default.pdf file contents...
+2022-12-02 18:12:58,642 [INFO] File successfully updated!
+2022-12-02 18:12:58,644 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: b'files/default.pdf')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 43, in upload_file
+    self.app.client.files_upload(channels=channel, file=self.file_path)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/client.py", line 2990, in files_upload
+    return self.api_call("files.upload", files={"file": file}, data=kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 156, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 187, in _sync_send
+    return self._urllib_api_call(
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 269, in _urllib_api_call
+    f: BinaryIO = open(v.encode("utf-8", "ignore"), "rb")
+FileNotFoundError: [Errno 2] No such file or directory: b'files/default.pdf'
+2022-12-02 18:14:15,762 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 36, in upload_file
+    generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/tableau_api/pdf_creator.py", line 54, in generate_pdf
+    os.chdir('../googledrive_api/files')
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files'
+2022-12-02 18:14:34,331 [INFO] A new session has been established (session id: 4f4a0167-69f4-4625-aeeb-1f5e7882424b)
+2022-12-02 18:14:34,331 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:14:34,333 [INFO] Starting to receive messages from a new connection (session id: 4f4a0167-69f4-4625-aeeb-1f5e7882424b)
+2022-12-02 18:14:41,994 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 36, in upload_file
+    generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/tableau_api/pdf_creator.py", line 54, in generate_pdf
+    os.chdir('../googledrive_api/files')
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files'
+2022-12-02 18:15:55,109 [INFO] A new session has been established (session id: eabbfcc9-bb32-4f02-b35d-96072adb5c9d)
+2022-12-02 18:15:55,109 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:15:55,130 [INFO] Starting to receive messages from a new connection (session id: eabbfcc9-bb32-4f02-b35d-96072adb5c9d)
+2022-12-02 18:16:01,563 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 36, in upload_file
+    generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/tableau_api/pdf_creator.py", line 56, in generate_pdf
+    os.chdir('../googledrive_api/files')
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files'
+2022-12-02 18:16:20,102 [INFO] A new session has been established (session id: 8c5b0f9a-e78f-4b6e-8bf7-b9a04dd37430)
+2022-12-02 18:16:20,102 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:16:20,154 [INFO] Starting to receive messages from a new connection (session id: 8c5b0f9a-e78f-4b6e-8bf7-b9a04dd37430)
+2022-12-02 18:16:25,866 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 32, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 18:16:28,201 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 36, in upload_file
+    generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/tableau_api/pdf_creator.py", line 56, in generate_pdf
+    os.chdir('../googledrive_api/files')
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files'
+2022-12-02 18:16:45,589 [INFO] A new session has been established (session id: a3a8c2de-5981-4c36-b798-f61abc6119f8)
+2022-12-02 18:16:45,589 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:16:45,671 [INFO] Starting to receive messages from a new connection (session id: a3a8c2de-5981-4c36-b798-f61abc6119f8)
+2022-12-02 18:16:55,159 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 36, in upload_file
+    generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/utils/tableau_api/pdf_creator.py", line 56, in generate_pdf
+    os.chdir('../googledrive_api/files')
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files'
+2022-12-02 18:18:44,089 [INFO] A new session has been established (session id: f766949f-f27e-4dd8-bf3f-7ec5e6a44261)
+2022-12-02 18:18:44,089 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:18:44,100 [INFO] Starting to receive messages from a new connection (session id: f766949f-f27e-4dd8-bf3f-7ec5e6a44261)
+2022-12-02 18:18:55,457 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:18:55,458 [INFO] Successfully retrieved access token
+2022-12-02 18:18:55,471 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:18:55,477 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:18:55,972 [INFO] default.pdf file located in google drive...
+2022-12-02 18:18:55,983 [INFO] Updating default.pdf file contents...
+2022-12-02 18:18:58,000 [INFO] File successfully updated!
+2022-12-02 18:18:58,002 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: b'files/default.pdf')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 43, in upload_file
+    self.app.client.files_upload(channels=channel, file=self.file_path)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/client.py", line 2990, in files_upload
+    return self.api_call("files.upload", files={"file": file}, data=kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 156, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 187, in _sync_send
+    return self._urllib_api_call(
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 269, in _urllib_api_call
+    f: BinaryIO = open(v.encode("utf-8", "ignore"), "rb")
+FileNotFoundError: [Errno 2] No such file or directory: b'files/default.pdf'
+2022-12-02 18:21:04,951 [INFO] A new session has been established (session id: deba5166-1feb-4130-aadd-c7a02d63bf6c)
+2022-12-02 18:21:04,952 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:21:04,958 [INFO] Starting to receive messages from a new connection (session id: deba5166-1feb-4130-aadd-c7a02d63bf6c)
+2022-12-02 18:21:18,440 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:21:18,442 [INFO] Successfully retrieved access token
+2022-12-02 18:21:18,452 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:21:18,457 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:21:18,928 [INFO] default.pdf file located in google drive...
+2022-12-02 18:21:18,939 [INFO] Updating default.pdf file contents...
+2022-12-02 18:21:20,918 [INFO] File successfully updated!
+2022-12-02 18:21:20,919 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: b'files/default.pdf')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 43, in upload_file
+    self.app.client.files_upload(channels=channel, file=self.file_path)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/client.py", line 2990, in files_upload
+    return self.api_call("files.upload", files={"file": file}, data=kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 156, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 187, in _sync_send
+    return self._urllib_api_call(
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 269, in _urllib_api_call
+    f: BinaryIO = open(v.encode("utf-8", "ignore"), "rb")
+FileNotFoundError: [Errno 2] No such file or directory: b'files/default.pdf'
+2022-12-02 18:22:14,243 [INFO] A new session has been established (session id: fabf2f8e-ac94-4c60-a486-a8c4ac17fdf0)
+2022-12-02 18:22:14,243 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:22:14,298 [INFO] Starting to receive messages from a new connection (session id: fabf2f8e-ac94-4c60-a486-a8c4ac17fdf0)
+2022-12-02 18:23:14,129 [INFO] A new session has been established (session id: c8dc26dc-3123-40f0-b2f9-680681c13f71)
+2022-12-02 18:23:14,129 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:23:14,170 [INFO] Starting to receive messages from a new connection (session id: c8dc26dc-3123-40f0-b2f9-680681c13f71)
+2022-12-02 18:23:29,958 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api/files')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 39, in upload_file
+    os.chdir("../googledrive_api/files")
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api/files'
+2022-12-02 18:24:30,550 [INFO] A new session has been established (session id: eff67bca-682f-49fa-bea6-b5cded29d5bb)
+2022-12-02 18:24:30,550 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:24:30,556 [INFO] Starting to receive messages from a new connection (session id: eff67bca-682f-49fa-bea6-b5cded29d5bb)
+2022-12-02 18:24:41,608 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: '../googledrive_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 40, in upload_file
+    os.chdir("../googledrive_api")
+FileNotFoundError: [Errno 2] No such file or directory: '../googledrive_api'
+2022-12-02 18:26:07,763 [INFO] A new session has been established (session id: ccace1d6-fb1e-451c-b788-f8bf1813eda2)
+2022-12-02 18:26:07,763 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:26:07,777 [INFO] Starting to receive messages from a new connection (session id: ccace1d6-fb1e-451c-b788-f8bf1813eda2)
+2022-12-02 18:26:09,401 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 32, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 18:26:19,444 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:26:19,445 [INFO] Successfully retrieved access token
+2022-12-02 18:26:19,457 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:26:19,463 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:26:20,027 [INFO] default.pdf file located in google drive...
+2022-12-02 18:26:20,033 [INFO] Updating default.pdf file contents...
+2022-12-02 18:26:22,123 [INFO] File successfully updated!
+2022-12-02 18:26:40,533 [INFO] A new session has been established (session id: c035a7e3-49f2-4116-acf7-4a78df15a739)
+2022-12-02 18:26:40,533 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:26:40,600 [INFO] Starting to receive messages from a new connection (session id: c035a7e3-49f2-4116-acf7-4a78df15a739)
+2022-12-02 18:26:57,914 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:26:57,914 [INFO] Successfully retrieved access token
+2022-12-02 18:26:57,927 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:26:57,929 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:26:58,434 [INFO] default.pdf file located in google drive...
+2022-12-02 18:26:58,441 [INFO] Updating default.pdf file contents...
+2022-12-02 18:27:00,381 [INFO] File successfully updated!
+2022-12-02 18:27:15,175 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 32, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 18:27:55,779 [INFO] A new session has been established (session id: dbda62f4-a0c0-4768-bcb5-a949c0b1fd16)
+2022-12-02 18:27:55,779 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:27:55,815 [INFO] Starting to receive messages from a new connection (session id: dbda62f4-a0c0-4768-bcb5-a949c0b1fd16)
+2022-12-02 18:28:10,366 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:28:10,367 [INFO] Successfully retrieved access token
+2022-12-02 18:28:10,376 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:28:10,383 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:28:10,867 [INFO] default.pdf file located in google drive...
+2022-12-02 18:28:10,880 [INFO] Updating default.pdf file contents...
+2022-12-02 18:28:12,755 [INFO] File successfully updated!
+2022-12-02 18:28:12,757 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: b'files/default.pdf')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 46, in upload_file
+    self.app.client.files_upload(channels=channel, file=self.file_path)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/client.py", line 2990, in files_upload
+    return self.api_call("files.upload", files={"file": file}, data=kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 156, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 187, in _sync_send
+    return self._urllib_api_call(
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_sdk/web/base_client.py", line 269, in _urllib_api_call
+    f: BinaryIO = open(v.encode("utf-8", "ignore"), "rb")
+FileNotFoundError: [Errno 2] No such file or directory: b'files/default.pdf'
+2022-12-02 18:28:48,468 [INFO] A new session has been established (session id: 4da4d918-9579-4a89-b0cf-913e0287c9eb)
+2022-12-02 18:28:48,469 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:28:48,572 [INFO] Starting to receive messages from a new connection (session id: 4da4d918-9579-4a89-b0cf-913e0287c9eb)
+2022-12-02 18:29:01,854 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:29:01,855 [INFO] Successfully retrieved access token
+2022-12-02 18:29:01,869 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:29:01,875 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:29:02,362 [INFO] default.pdf file located in google drive...
+2022-12-02 18:29:02,364 [INFO] Updating default.pdf file contents...
+2022-12-02 18:29:04,308 [INFO] File successfully updated!
+2022-12-02 18:29:17,793 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:29:17,793 [INFO] Successfully retrieved access token
+2022-12-02 18:29:17,801 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:29:17,807 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:29:18,329 [INFO] default.pdf file located in google drive...
+2022-12-02 18:29:18,329 [INFO] Updating default.pdf file contents...
+2022-12-02 18:29:20,277 [INFO] File successfully updated!
+2022-12-02 18:31:06,445 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 33, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 18:31:11,527 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:31:11,527 [INFO] Successfully retrieved access token
+2022-12-02 18:31:11,535 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:31:11,541 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:31:12,106 [INFO] default.pdf file located in google drive...
+2022-12-02 18:31:12,106 [INFO] Updating default.pdf file contents...
+2022-12-02 18:31:14,023 [INFO] File successfully updated!
+2022-12-02 18:31:54,128 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:31:54,128 [INFO] Successfully retrieved access token
+2022-12-02 18:31:54,138 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:31:54,144 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:31:54,732 [INFO] default.pdf file located in google drive...
+2022-12-02 18:31:54,732 [INFO] Updating default.pdf file contents...
+2022-12-02 18:31:54,978 [ERROR] Failed to run listener function (error: [Errno 2] No such file or directory: 'utils/tableau_api')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 80, in button_click_action
+    pdf.upload_file(channel=body["user"]["id"])
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/buttons/file_upload_button.py", line 33, in upload_file
+    os.chdir("utils/tableau_api")
+FileNotFoundError: [Errno 2] No such file or directory: 'utils/tableau_api'
+2022-12-02 18:31:56,672 [INFO] File successfully updated!
+2022-12-02 18:32:32,585 [INFO] A new session has been established (session id: 214c39bb-e782-4776-87dd-b5409288356c)
+2022-12-02 18:32:32,586 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:32:32,610 [INFO] Starting to receive messages from a new connection (session id: 214c39bb-e782-4776-87dd-b5409288356c)
+2022-12-02 18:32:47,643 [INFO] Received token response with no refresh_token. Consider reauthenticating with prompt='consent'.
+2022-12-02 18:32:47,645 [INFO] Successfully retrieved access token
+2022-12-02 18:32:47,648 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:32:47,653 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:32:48,117 [INFO] default.pdf file located in google drive...
+2022-12-02 18:32:48,129 [INFO] Updating default.pdf file contents...
+2022-12-02 18:32:49,975 [INFO] File successfully updated!
+2022-12-02 18:33:52,175 [INFO] A new session has been established (session id: 91506b1c-4f71-4e44-9564-4b71902ea714)
+2022-12-02 18:33:52,175 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:33:52,211 [INFO] Starting to receive messages from a new connection (session id: 91506b1c-4f71-4e44-9564-4b71902ea714)
+2022-12-02 18:34:05,879 [INFO] Successfully retrieved access token
+2022-12-02 18:34:05,886 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:34:05,893 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:34:06,444 [INFO] default.pdf file located in google drive...
+2022-12-02 18:34:06,449 [INFO] Updating default.pdf file contents...
+2022-12-02 18:34:08,483 [INFO] File successfully updated!
+2022-12-02 18:34:21,867 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:34:21,868 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:34:22,366 [INFO] default.pdf file located in google drive...
+2022-12-02 18:34:22,366 [INFO] Updating default.pdf file contents...
+2022-12-02 18:34:24,584 [INFO] File successfully updated!
+2022-12-02 18:34:45,137 [INFO] A new session has been established (session id: f3c35374-15f8-4da6-af00-461c632a8639)
+2022-12-02 18:34:45,138 [INFO] ⚡️ Bolt app is running!
+2022-12-02 18:34:45,211 [INFO] Starting to receive messages from a new connection (session id: f3c35374-15f8-4da6-af00-461c632a8639)
+2022-12-02 18:34:58,818 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:34:58,818 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:34:59,285 [INFO] default.pdf file located in google drive...
+2022-12-02 18:34:59,289 [INFO] Updating default.pdf file contents...
+2022-12-02 18:35:01,146 [INFO] File successfully updated!
+2022-12-02 18:35:26,876 [INFO] Files to be updated/uploaded: dict_keys(['default.pdf'])...
+2022-12-02 18:35:26,876 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-02 18:35:27,376 [INFO] default.pdf file located in google drive...
+2022-12-02 18:35:27,377 [INFO] Updating default.pdf file contents...
+2022-12-02 18:35:29,250 [INFO] File successfully updated!

@@ -1,10 +1,9 @@
 import typing as T
 from slack_bolt import App
 import os
-import re
 
 from utils.googledrive_api.gdrive_update_upload import gdrive_update_upload
-
+from utils.tableau_api.pdf_creator import generate_pdf
 
 class FileUploadButton:
     def __init__(
@@ -26,9 +25,22 @@ class FileUploadButton:
         )
 
     def upload_file(self, channel):
+
+        owd = os.getcwd()
+
         # change dir to function dir
-        os.chdir("utils/googledrive_api")
+        os.chdir("utils/tableau_api")
+        
+        # generate pdf
+        #TODO: Remember to change these args
+        generate_pdf('[Draft] NPS One Pagers Mock up', 'NPSOnePagerDIRECTROLLUP', 'Manager', None)
+       
+        # change dir to function dir
+        os.chdir("../")
+        
         # upload fresh file to gdrive
         gdrive_update_upload(folder_id="1X3Qew8QlzOWwhtFjYOBtfMqaVnvEzRye")
 
         self.app.client.files_upload(channels=channel, file=self.file_path)
+
+        os.chdir(owd)

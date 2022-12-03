@@ -3,7 +3,6 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import logging
 
-
 if not os.path.exists("debug_logs"):
     os.makedirs("debug_logs")
 
@@ -25,7 +24,7 @@ def gdrive_update_upload(folder_id: str):
     except Exception as e:
         print(e)
 
-    # print(os.path())
+    
     upload_file_dict = {
         os.path.join("files", file).split("/")[-1]: os.path.join("files", file)
         for file in os.listdir("files")

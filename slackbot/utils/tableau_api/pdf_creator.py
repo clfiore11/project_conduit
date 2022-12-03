@@ -15,7 +15,7 @@ env_path = Path(".") / '.env'
 load_dotenv()
 
 
-def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[T.List, str, None]):
+def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[str, None]):
     # Login to the Tableau Instance
     tableau_server_config = {
             os.environ['environment']: {
@@ -51,13 +51,16 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[T.
         pdf_view = conn.query_view_pdf(view_id=vid,parameter_dict=pdf_params)   
 
         # Save File to specified path 
+
+        os.chdir('../googledrive_api/files')
         with open('default.pdf', 'wb') as pdf_file:
             pdf_file.write(pdf_view.content)
 
     else:
         name_list = list(filters)
         #TODO: Ensure list of strings and individual string work on this. 
-        name_filter_field = parse.quote(filterable)
+        # name_filter_field = parse.quote(filterable)
+        name_filter_field = filterable
         for i in name_list:
             name_filter_value = parse.quote(i)
             # Downloading the default view as it appears on the dashboard
@@ -75,6 +78,7 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[T.
             pdf_title_string = i.replace(' ','_') + '.pdf'
             
             # Save File to specified path 
+            os.chdir('../googledrive_api/files')
             with open(pdf_title_string, 'wb') as pdf_file:
                 pdf_file.write(pdf_view.content)
 
@@ -84,7 +88,7 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[T.
 
 if __name__ == "__main__":
     import argparse
-    
+
     parser = argparse.ArgumentParser()
     parser.add_argument('name', help="Dashboard Name")
     parser.add_argument('tab', help="Dashboard Tab")
@@ -93,6 +97,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     try:
-        generate_pdf(args.name, args.tab, args.filter, args.value)
+        v = None if args.value == 'None' else args.value
+        generate_pdf(args.name, args.tab, args.filter, v)
     except Exception as e:
         print(e)
