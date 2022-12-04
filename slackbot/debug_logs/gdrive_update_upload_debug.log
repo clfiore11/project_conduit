@@ -1538,3 +1538,116 @@ FileNotFoundError: [Errno 2] No such file or directory: b'files/Sylvia_Matthews.
 2022-12-02 20:14:17,190 [INFO] Varshi_Ike.pdf file located in google drive...
 2022-12-02 20:14:17,191 [INFO] Updating Varshi_Ike.pdf file contents...
 2022-12-02 20:14:19,021 [INFO] File successfully updated!
+2022-12-03 15:58:18,967 [INFO] A new session has been established (session id: 5d3acc25-0ea2-4d36-b74a-e3efc5ec2501)
+2022-12-03 15:58:18,967 [INFO] ⚡️ Bolt app is running!
+2022-12-03 15:58:19,018 [INFO] Starting to receive messages from a new connection (session id: 5d3acc25-0ea2-4d36-b74a-e3efc5ec2501)
+2022-12-03 15:58:59,725 [INFO] access_token is expired. Now: 2022-12-03 23:58:59.725971, token_expiry: 2022-12-03 04:37:24
+2022-12-03 15:58:59,726 [INFO] Refreshing access_token
+2022-12-03 15:58:59,984 [INFO] Files to be updated/uploaded: dict_keys(['.DS_Store', 'Jane_Doe.pdf'])...
+2022-12-03 15:58:59,987 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-03 15:59:00,484 [INFO] .DS_Store file located in google drive...
+2022-12-03 15:59:00,488 [INFO] Updating .DS_Store file contents...
+2022-12-03 15:59:02,966 [INFO] File successfully updated!
+2022-12-03 15:59:02,966 [INFO] Jane_Doe.pdf file located in google drive...
+2022-12-03 15:59:02,967 [INFO] Updating Jane_Doe.pdf file contents...
+2022-12-03 15:59:05,217 [INFO] File successfully updated!
+2022-12-03 16:17:38,776 [INFO] A new session has been established (session id: e1e2565e-7f67-420e-a934-b58ffe9b26d9)
+2022-12-03 16:17:38,776 [INFO] ⚡️ Bolt app is running!
+2022-12-03 16:17:38,815 [INFO] Starting to receive messages from a new connection (session id: e1e2565e-7f67-420e-a934-b58ffe9b26d9)
+2022-12-03 16:17:44,879 [WARNING] Unhandled request ({'type': 'event_callback', 'event': {'type': 'message'}})
+---
+[Suggestion] You can handle this type of event with the following listener function:
+
+@app.event("message")
+def handle_message_events(body, logger):
+    logger.info(body)
+
+2022-12-03 16:17:44,879 [INFO] Unsuccessful Bolt execution result (status: 404, body: {"error": "unhandled request"})
+2022-12-03 16:17:47,964 [WARNING] Unhandled request ({'type': 'event_callback', 'event': {'type': 'message'}})
+---
+[Suggestion] You can handle this type of event with the following listener function:
+
+@app.event("message")
+def handle_message_events(body, logger):
+    logger.info(body)
+
+2022-12-03 16:17:47,964 [INFO] Unsuccessful Bolt execution result (status: 404, body: {"error": "unhandled request"})
+2022-12-03 16:17:51,289 [ERROR] Failed to run listener function (error: 'dict' object has no attribute 'lower')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 63, in message_hello
+    message = message.lower()
+AttributeError: 'dict' object has no attribute 'lower'
+2022-12-03 16:18:18,189 [ERROR] Failed to run listener function (error: 'dict' object has no attribute 'lower')
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/thread_runner.py", line 120, in run_ack_function_asynchronously
+    listener.run_ack_function(request=request, response=response)
+  File "/opt/homebrew/lib/python3.10/site-packages/slack_bolt/listener/custom_listener.py", line 50, in run_ack_function
+    return self.ack_function(
+  File "/Users/sylvesterikpa/Desktop/Slack Bot/project_conduit/slackbot/app.py", line 63, in message_hello
+    say(
+AttributeError: 'dict' object has no attribute 'lower'
+2022-12-03 16:18:25,133 [INFO] A new session has been established (session id: 377780fd-90b2-45d0-9381-3092fd217a22)
+2022-12-03 16:18:25,133 [INFO] ⚡️ Bolt app is running!
+2022-12-03 16:18:25,186 [INFO] Starting to receive messages from a new connection (session id: 377780fd-90b2-45d0-9381-3092fd217a22)
+2022-12-03 16:20:00,323 [INFO] A new session has been established (session id: 343fc68d-af03-4e5b-b623-71f12320e529)
+2022-12-03 16:20:00,324 [INFO] ⚡️ Bolt app is running!
+2022-12-03 16:20:00,340 [INFO] Starting to receive messages from a new connection (session id: 343fc68d-af03-4e5b-b623-71f12320e529)
+2022-12-03 16:21:43,237 [WARNING] Unhandled request ({'type': 'event_callback', 'event': {'type': 'message'}})
+---
+[Suggestion] You can handle this type of event with the following listener function:
+
+@app.event("message")
+def handle_message_events(body, logger):
+    logger.info(body)
+
+2022-12-03 16:21:43,237 [INFO] Unsuccessful Bolt execution result (status: 404, body: {"error": "unhandled request"})
+2022-12-03 16:21:46,302 [WARNING] Unhandled request ({'type': 'event_callback', 'event': {'type': 'message'}})
+---
+[Suggestion] You can handle this type of event with the following listener function:
+
+@app.event("message")
+def handle_message_events(body, logger):
+    logger.info(body)
+
+2022-12-03 16:21:46,302 [INFO] Unsuccessful Bolt execution result (status: 404, body: {"error": "unhandled request"})
+2022-12-03 16:22:49,188 [WARNING] Unhandled request ({'type': 'event_callback', 'event': {'type': 'message'}})
+---
+[Suggestion] You can handle this type of event with the following listener function:
+
+@app.event("message")
+def handle_message_events(body, logger):
+    logger.info(body)
+
+2022-12-03 16:22:49,188 [INFO] Unsuccessful Bolt execution result (status: 404, body: {"error": "unhandled request"})
+2022-12-03 16:27:52,058 [WARNING] Unhandled request ({'type': 'event_callback', 'event': {'type': 'message'}})
+---
+[Suggestion] You can handle this type of event with the following listener function:
+
+@app.event("message")
+def handle_message_events(body, logger):
+    logger.info(body)
+
+2022-12-03 16:27:52,059 [INFO] Unsuccessful Bolt execution result (status: 404, body: {"error": "unhandled request"})
+2022-12-03 16:34:52,829 [INFO] Files to be updated/uploaded: dict_keys(['.DS_Store', 'Jane_Doe.pdf'])...
+2022-12-03 16:34:52,833 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-03 16:34:53,309 [INFO] .DS_Store file located in google drive...
+2022-12-03 16:34:53,314 [INFO] Updating .DS_Store file contents...
+2022-12-03 16:34:55,698 [INFO] File successfully updated!
+2022-12-03 16:34:55,698 [INFO] Jane_Doe.pdf file located in google drive...
+2022-12-03 16:34:55,699 [INFO] Updating Jane_Doe.pdf file contents...
+2022-12-03 16:34:57,855 [INFO] File successfully updated!
+2022-12-03 16:43:21,050 [INFO] A new session has been established (session id: b7742004-3b7d-4bcb-aefd-199f4a94100f)
+2022-12-03 16:43:21,051 [INFO] ⚡️ Bolt app is running!
+2022-12-03 16:43:21,070 [INFO] Starting to receive messages from a new connection (session id: b7742004-3b7d-4bcb-aefd-199f4a94100f)
+2022-12-03 16:43:46,589 [INFO] Files to be updated/uploaded: dict_keys(['.DS_Store', 'Jane_Doe.pdf'])...
+2022-12-03 16:43:46,595 [INFO] file_cache is only supported with oauth2client<4.0.0
+2022-12-03 16:43:47,057 [INFO] .DS_Store file located in google drive...
+2022-12-03 16:43:47,062 [INFO] Updating .DS_Store file contents...
+2022-12-03 16:43:49,365 [INFO] File successfully updated!
+2022-12-03 16:43:49,365 [INFO] Jane_Doe.pdf file located in google drive...
+2022-12-03 16:43:49,365 [INFO] Updating Jane_Doe.pdf file contents...
+2022-12-03 16:43:51,721 [INFO] File successfully updated!
