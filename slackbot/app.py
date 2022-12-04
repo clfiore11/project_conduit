@@ -1,6 +1,7 @@
+# Import libraries
 import logging
 import os
-
+import re
 from dotenv import load_dotenv
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
@@ -20,7 +21,7 @@ SLACK_BOT_TOKEN = os.environ["SLACK_BOT_TOKEN"]
 app = App(token=SLACK_BOT_TOKEN)
 logger = logging.getLogger(__name__)
 
-# Define buttons
+# Configure buttons with specific actions
 pdf1 = FileUploadButton(
     app=app,
     name="Report: Manager 1",
@@ -54,8 +55,21 @@ pdf4 = FileUploadButton(
 )
 
 # Slack Socket to Listen for the world hello
-@app.message("hello")
+list_of_words = ['hello', 'Hello', 'Hi','hi','report', 'Report']
+words_re = re.compile("|".join(list_of_words))
+
+@app.message(words_re)
 def message_hello(message, say):
+    """
+    message_hello does x, y, z
+
+        message: 
+        say: 
+
+    return: no explicit return statement or value.
+
+    """
+
     say(
         blocks=[
             {
@@ -65,7 +79,7 @@ def message_hello(message, say):
                     "text": f"Hello <@{message['user']}>. {GREETING}",
                 },
             },
-            # Buttons
+            # Buttons for user to see
             {"type": "actions", "elements": [pdf1.__dict__()[0]]},
             {"type": "actions", "elements": [pdf2.__dict__()[0]]},
             {"type": "actions", "elements": [pdf3.__dict__()[0]]},
@@ -76,6 +90,16 @@ def message_hello(message, say):
 
 @app.event("app_mention")
 def mention_reply(body, say):
+    """
+    message_hello does x, y, z
+
+        body: 
+        say: 
+
+    return: no explicit return statement or value.
+
+    """
+
     say(
         blocks=[
             {
@@ -89,6 +113,7 @@ def mention_reply(body, say):
     )
 
 
+# Configure actions for each button
 @app.action(pdf1.action_id)
 def button_click_action(body, ack, say):
     ack(),
@@ -114,6 +139,7 @@ def button_click_action(body, ack, say):
     ack(),
     say({"text": "Grabbing your requested PDF!"})
     pdf4.upload_file(body["user"]["id"],pdf4.manager)  
+
 
 def main():
     handler = SocketModeHandler(app, SLACK_APP_TOKEN)

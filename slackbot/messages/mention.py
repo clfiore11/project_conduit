@@ -1,1 +1,1 @@
-MENTION_REPLY = "KEEP MY WIFES NAME OUT YA MOUTH!"
+MENTION_REPLY = "How can I help you today?"

@@ -17,6 +17,16 @@ logging.basicConfig(
 
 
 def gdrive_update_upload(folder_id: str):
+    """
+    gdrive_update_upload will scan the google drive and upload values as things are 
+
+        folder_id: The folder_id is the destination location for the item we would like to upload
+
+    return: no explicit return statement or value.
+
+    """
+
+
     try:
         gauth = GoogleAuth()
         gauth.LocalWebserverAuth()

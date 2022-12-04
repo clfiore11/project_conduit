@@ -1,6 +1,4 @@
 # Import libraries
-
-# TODO: Add Logging
 import os
 import typing as T
 from pathlib import Path
@@ -16,6 +14,17 @@ load_dotenv()
 
 
 def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[str, None]):
+    """
+    generate_pdf produces a pdf file from a tableau dashboard.
+
+        name: provide the name of the dashbooard.
+        tab: provide the tab of the dashboard.
+        filterable: provide the filter your would like to apply.
+        filters: provide a item(s) you would like to filter by.
+
+    return: after the process has concluded, it will return a message confirming the pdf has been generated.
+    """ 
+
     # Login to the Tableau Instance
     tableau_server_config = {
             os.environ['environment']: {
@@ -59,14 +68,15 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[st
         
     else:
         name_list = list(filters)
+
         #TODO: Ensure list of strings and individual string work on this. 
         name_filter_field = parse.quote(filterable)
         
         for i in name_list:
             # name_filter_value = parse.quote(i)
             name_filter_value = i
-            # Downloading the default view as it appears on the dashboard
 
+            # Downloading the default view as it appears on the dashboard
             pdf_params = {
             'type': 'type=unspecified',
             'orientation': 'orientation=Landscape',
@@ -87,6 +97,7 @@ def generate_pdf(name, tab, filterable : T.Union[str, None], filters: T.Union[st
 
     # Log out
     conn.sign_out()
+    return "Process complete. The PDF has been generated."
 
 
 if __name__ == "__main__":
@@ -102,5 +113,6 @@ if __name__ == "__main__":
     try:
         v = None if args.value == 'None' else args.value
         generate_pdf(args.name, args.tab, args.filter, v)
+
     except Exception as e:
         print(e)
