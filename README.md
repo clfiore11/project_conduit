@@ -43,16 +43,16 @@ The initial project is setup to integrate the following applications:
 ### Tableau API Instructions
 * Follow instructions below from [tableau-api-lib overview](https://pypi.org/project/tableau-api-lib/):
 
-Create a `.env` file and copy the code below to hold your enviornment variables and secrets. 
+Create a `.env` file and copy the code below to hold your environment variables and secrets. 
 
 ```
-server=https://YourTableauServerNameHere.com/
+server=https://<hostname>/
 api_version=3.12
-personal_access_token_name=Token Name
-personal_access_token_secret=Token Secret
-site_name=Site Name
-site_url=Site URL
-environment=Enviornment Name
+personal_access_token_name= <access_token_name>
+personal_access_token_secret=<token_secret>
+site_name=<site_name>
+site_url=<site_url>
+environment=<enviornment_name>
 ```
 
 API Version:  
@@ -68,5 +68,5 @@ Site Name and URL:
 * `site_url`, also known as the content URL, and `site_name` is a segment of the URL that indicates the site you are logging into. You can verify what your site_url and site name is by navigating to your site in your browser, and identifying how your site appears in the URL path.
 
 [Optional] Enviornment:
-*  If you have multiple Tabelau Server instances, use environment to delineate between them. This information is typically held by your Tableau admin. 
+*  If you have multiple Tabeleau Server instances, use environment to delineate between them. This information is typically held by your Tableau admin. 
 

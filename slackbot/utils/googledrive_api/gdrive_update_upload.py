@@ -3,9 +3,11 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import logging
 
+# create directory for logger to write out to
 if not os.path.exists("debug_logs"):
     os.makedirs("debug_logs")
 
+# initialize logger for function.
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -18,15 +20,14 @@ logging.basicConfig(
 
 def gdrive_update_upload(folder_id: str):
     """
-    gdrive_update_upload will scan the google drive and upload values as things are 
+    gdrive_update_upload will scan the google drive and upload values as things are
 
         folder_id: The folder_id is the destination location for the item we would like to upload
 
     return: no explicit return statement or value.
 
     """
-
-
+    # Attempt signing into google drive API
     try:
         gauth = GoogleAuth()
         gauth.LocalWebserverAuth()
@@ -34,17 +35,19 @@ def gdrive_update_upload(folder_id: str):
     except Exception as e:
         print(e)
 
-    
+    # get list of local image files that are to be uploaded
     upload_file_dict = {
         os.path.join("files", file).split("/")[-1]: os.path.join("files", file)
         for file in os.listdir("files")
     }
 
+    # get list of files that exists in google drive folder
     logging.info(f"Files to be updated/uploaded: {upload_file_dict.keys()}...")
     gfiles = drive.ListFile(
         {"q": f"'{folder_id}' in parents and trashed=false"}
     ).GetList()
 
+    # upload new files to google drive and update existing files.
     gfile_dict = {file["title"]: file["id"] for file in gfiles}
     for file_name in upload_file_dict:
         try:
@@ -69,6 +72,7 @@ def gdrive_update_upload(folder_id: str):
 
         except Exception as e:
             print(e)
+
 
 if __name__ == "__main__":
     import argparse
