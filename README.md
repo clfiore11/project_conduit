@@ -52,7 +52,7 @@ personal_access_token_name= <access_token_name>
 personal_access_token_secret=<token_secret>
 site_name=<site_name>
 site_url=<site_url>
-environment=<enviornment_name>
+environment=<environment_name>
 ```
 
 API Version:  
@@ -67,6 +67,35 @@ Generating Token Name and Secrets:
 Site Name and URL:
 * `site_url`, also known as the content URL, and `site_name` is a segment of the URL that indicates the site you are logging into. You can verify what your site_url and site name is by navigating to your site in your browser, and identifying how your site appears in the URL path.
 
-[Optional] Enviornment:
+[Optional] Environment:
 *  If you have multiple Tabeleau Server instances, use environment to delineate between them. This information is typically held by your Tableau admin. 
 
+### Slack
+To leverage the Slack bot code provided, you will need to log into your Slack workspace and create a new Slack bot. After following the steps below, you’ll take your <SLACK_BOT_TOKEN> and <SLACK_APP_TOKEN> and add them to your .env file.
+
+1. Go to api.slack.com and click “Your Apps” in the upper right-hand corner.
+2. Click “Create New App” and select “From scratch”
+3. Name your bot
+4. Under “Settings”, set “Sock Mode” set to Enabled
+5. Under “OAuth and Permissions” add the following Scopes:
+    - app_mentions:read
+    - channels:history
+    - channels:read
+    - chat:write
+    - chat:write:customize
+    - files:write
+    - im:history
+    - im:read
+    - im:write
+    - incoming-webhook
+6. Under “Event Subscriptions” add the following events to the bot events section:
+app_mention
+    - message.channels
+    - message.im
+7. Install the bot into your workspace
+
+8. Finally, store the bot credentials in your .env file:
+    - `SLACK_BOT_TOKEN=<SLACK_BOT_TOKEN>`
+    - `SLACK_APP_TOKEN=<SLACK_APP_TOKEN>`
+
+9. In your terminal, run: python app.py
